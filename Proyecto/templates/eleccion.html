@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{{ url_for('static', filename='css/estilo_eleccion.css') }}" rel="stylesheet" type="text/css" />
+		<title>Preceptor</title>
+	</head>
+	<body>
+
+		<form action="{{ request.path }}" method="post">
+		<h1>Menú</h1>
+    
+        <a  href="{{ url_for('asistencia')}}">Registrar Asistencia</a>
+        <br><br>
+        <a  href="{{ url_for('informe')}}">Informe con Detalles</a>
+
+ 
+		</form>
+		<br><br>
+		<button onclick="window.location.href='{{url_for('sesion')}}'">Inicio</button>
+
+	</body>
+</html>

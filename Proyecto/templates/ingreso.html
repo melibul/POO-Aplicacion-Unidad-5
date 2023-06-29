@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<form action="{{ request.path }}" method="post">
+<html>
+<head>
+  <title>Formulario de inicio de sesión</title>
+  <link href="{{ url_for('static', filename='css/estilo_ingreso.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ 
+  <h2>Inicio de sesión</h2><br><br>
+  <div class="email">
+    <tb><label for="correo">Email</label></tb>    
+    <tb><input type="text" id="correo" name="correo" required></tb><br><br>
+   
+  
+    
+    <td><label for="clave">Contraseña</label></td>
+    <td><input type="password" id="clave" name="clave" required></td><br><br>
+  
+    
+    <label>Rol:</label>
+   
+    <label for="preceptor">
+      <input type="radio" id="preceptor" name="tipo_usuario" value="preceptor" required>
+      Preceptor
+    </label>
+    
+    <label for="padre">
+      <input type="radio" id="padre" name="tipo_usuario" value="padre" required>
+      Padre Madre o Tutor
+    </label>
+    
+    <input type="submit" value="Iniciar sesión"><br><br>
+  </form>
+  <br><br>
+  <button onclick="window.location.href='{{url_for('sesion')}}'">Inicio</button>
+</body>
+</html>

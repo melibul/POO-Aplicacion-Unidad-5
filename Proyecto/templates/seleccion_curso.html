@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asistencia</title>
+  <link href="{{ url_for('static', filename='css/estilo_seleccion_curso.css') }}" rel="stylesheet" type="text/css" /></head>
+<body>
+  <h1>Asistencia</h1>
+  <form action="{{ request.path }}" method="POST">
+<label for="curso">Curso:</label>
+    <select name="curso" id="curso">
+      {% for curso in cursos %}
+        <option value="{{ curso.id }}">{{ curso.id }}</option>
+      {% endfor %}
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Listar Estudiantes">
+  </form>
+  <br><br>
+  <button onclick="window.location.href='{{url_for('sesion')}}'">Inicio</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+      background-color: white;
+      color: black;
+    }
+
+    form {
+      border: 2px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      margin: 0 auto;
+      background-color: beige;
+      padding-right: 33px;
+      padding-left: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      
+    }
+
+    input[type="submit"] {
+      margin-top: 25px;
+      margin-left: 110px;
+    }
+    button{
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(117, 117, 98);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }

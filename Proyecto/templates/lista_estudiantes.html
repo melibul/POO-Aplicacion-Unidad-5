@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asistencia</title>
+  <link href="{{ url_for('static', filename='css/estilo_lista_estudiantes.css') }}" rel="stylesheet" type="text/css" /></head>
+</head>
+<body>
+<form  action="{{ request.path }}"method="POST">
+    <h1>Listado de Alumnos</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Asistencia</th>
+          <th>Justificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for estudiante in estudiantes %}
+        <tr>
+          <td>{{ estudiante.id }}</td>
+          <td>{{ estudiante.nombre }}</td>
+          <td>{{ estudiante.apellido }}</td>
+          <td>
+            <select name="asistio[]">
+              <option value="s">Asistió</option>
+              <option value="n">No Asistió</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" name="justificacion[]">
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <button type="submit">Guardar asistencia</button>
+</form>
+<br><br>
+<button onclick="window.location.href='{{url_for('sesion')}}'">Inicio</button>
+
+</body>
+</html>

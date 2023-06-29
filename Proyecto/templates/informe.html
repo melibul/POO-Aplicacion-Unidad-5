@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informe de Asistencia</title>
+    <link href="{{ url_for('static', filename='css/estilo_informe.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Informe de Asistencia</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Aula Presente</th>
+                <th>Aula Ausente con Justificación</th>
+                <th>Aula Ausente sin Justificación</th>
+                <th>Educación Física Presente</th>
+                <th>Educación Física Ausente con Justificación</th>
+                <th>Educación Física Ausente sin Justificación</th>
+                <th>Inasistencias Totales</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes%}
+            <tr>
+                <td>{{ estudiante.nombre }}</td>
+                <td>{{ estudiante.apellido }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][0] }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][1] }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][2] }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][3] }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][4] }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][5] }}</td>
+                <td>{{ asistencia_arreglo[loop.index0][6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <button onclick="window.location.href='{{url_for('sesion')}}'">Inicio</button>
+
+</body>
+</html>

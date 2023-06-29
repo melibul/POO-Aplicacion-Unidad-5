@@ -1,0 +1,11 @@
+<head>
+<title>Colegio San Miguel</title>
+<link href="{{ url_for('static', filename='css/estilo_error.css') }}" rel="stylesheet" type="text/css" /></head>
+</head>
+<body>
+
+<h1> {{ error }} </h1>
+<br><br>
+<button onclick="window.location.href='{{url_for('sesion')}}'">Inicio</button>
+<button onclick="window.location.href='{{ url_for('go_back') }}'">Volver</button>
+</body>

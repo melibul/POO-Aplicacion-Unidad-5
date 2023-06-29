@@ -1,0 +1,19 @@
+body {
+    background-color: beige;
+  }
+  
+  body, select, input {
+    font-family: "Times New Roman", Times, serif;
+  }
+  button{
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 0px;
+    padding: 10px;
+    background-color: rgb(117, 117, 98);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
